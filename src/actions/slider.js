@@ -8,9 +8,7 @@ export const getSliderData = () => {
   return async (dispatch) => {
     try {
       let res = await axios.get(urlApi);
-      console.log(res.data);
-      console.log(1);
-      dispatch(getImagesSuccess(res.data)) // res.data will be an [] of images
+      dispatch(getImagesSuccess(res.data)) // will be data slider
     }
     catch(e) {
       console.error('Fetching slider data failed: ' + e)
@@ -22,8 +20,6 @@ export const getFilteredData = (options) => {
   return async (dispatch) => {
     try {
       let res = await axios.get(`${urlApi}?dateFrom=${options.dateFrom}&dateTo=${options.dateTo}`);
-      console.log(res.data);
-      console.log(2);
       dispatch(setFilterData(res.data)) // filtered data
     }
     catch(e) {

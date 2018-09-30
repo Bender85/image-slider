@@ -39,8 +39,6 @@ export default class SliderFilter extends Component {
     if(!dateFrom || !dateTo) {
       alert('please choice a date');
     } else {
-      console.log(dateFrom);
-      console.log(dateTo);
       getFilteredData({dateFrom, dateTo});
     }
   }

@@ -1,0 +1,2 @@
+export const FETCH_SLIDER_DATA = 'FETCH_SLIDER_DATA';
+export const FILTERED_DATA = 'FILTERED_DATA';
